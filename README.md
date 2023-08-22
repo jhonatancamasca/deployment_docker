@@ -1,27 +1,6 @@
-# Sprint project 03
-> Flask ML API
-
-## The Business problem
-
-Imagine that you work for a company that has a large collection of images and needs to automatically classify them into different categories. This task can be time-consuming and error-prone when done manually by human workers.
-
-Your task is to develop a solution that can automatically classify images into over 1000 different categories using a Convolutional Neural Network (CNN) implemented in Tensorflow. Your solution will consist of a Web UI and a Python Flask API that serves the CNN.
-
-The Web UI should allow users to upload an image and receive the predicted class for that image.
-
-The Python Flask API should receive the uploaded image, preprocess it (e.g. resize, normalize), feed it into the CNN, and return the predicted class as a JSON object. The API should handle errors gracefully and provide informative error messages to the UI if something goes wrong.
-
-You shouldn't worry for now about the TensorFlow CNN because we will use a pre-trained model for this problem. We provide you with a Jupyter notebook [here](https://drive.google.com/file/d/1ADuBSE4z2ZVIdn66YDSwxKv-58U7WEOn/view?usp=sharing) which shows how to load and run this model and hope will serve as a motivation for you to learn in-depth how these amazing models work during the next sprint!
+# Flask ML API
 
 ## Technical aspects
-
-To develop this solution you will need to have a proper working environment setup in your machine consisting of:
-- Docker
-- docker-compose
-- VS Code or any other IDE of your preference
-- Optional: Linux subsystem for Windows (WSL2)
-
-Please make sure to carefully read the `ASSIGNMENT.md` file which contains detailed instructions about the code you have to complete to make the project run correctly.
 
 The technologies involved are:
 - Python is the main programming language
@@ -57,17 +36,6 @@ To stop the services:
 $ docker-compose down
 ```
 
-**Note: Why do I need to setup UID and GID?**
-
-UID (User ID) and GID (Group ID) are used in Docker images to specify the user and group that should be used when running a container from the image.
-
-When a Docker container is started, it runs as a specific user and group within the container's filesystem. By default, the user and group used in the container are the same as the ones on the host system that are running the container. However, this can lead to security issues because the container may have different permissions and access than the host system.
-
-To avoid these issues, Docker provides the ability to specify a UID and GID when building a Docker image. This allows you to create a user and group within the container that has specific permissions and access. For example, you may want to create a user that has read-only access to certain directories or files within the container.
-
-In addition to security, specifying a UID and GID can also help with the portability of Docker images. By using specific UIDs and GIDs, you can ensure that the container runs as expected across different host systems, even if those systems have different user and group configurations.
-
-Overall, using UID and GID in a Docker image helps to ensure that containers are secure, portable, and operate with the appropriate permissions and access levels.
 
 ## Code Style
 
@@ -83,9 +51,6 @@ Wanna read more about Python code style and good practices? Please see:
 - [The Hitchhiker’s Guide to Python: Code Style](https://docs.python-guide.org/writing/style/)
 - [Google Python Style Guide](https://google.github.io/styleguide/pyguide.html)
 
-## Tests
-
-We provide unit tests along with the project that you can run and check from your side the code meets the minimum requirements of correctness needed to approve. To run just execute:
 
 ### 1. Modules
 
